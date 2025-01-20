@@ -5,12 +5,13 @@ import { getAllTodoAPI } from '../services/allAPI'
 const View = ({addResponseFromHome}) => {
 
   const [deleteTodoResponseFromTodoData,SetDeleteTodoResponseFromTodoData]=useState("")
+  const [updateTodoResponseFromTodoData,SetUpdateTodoResponseFromTodoData]=useState("")
 
   const [allTodos, setAllTodos] = useState('')
 
   useEffect(() => {
     getAllTodos()
-  }, [addResponseFromHome,deleteTodoResponseFromTodoData])
+  }, [addResponseFromHome,deleteTodoResponseFromTodoData,updateTodoResponseFromTodoData])
 
   const getAllTodos = async () => {
     try {
@@ -39,9 +40,9 @@ const View = ({addResponseFromHome}) => {
         allTodos?.length >0?
    allTodos.map(todo=>(
 
-      <TodoData displayData={todo} SetDeleteTodoResponseFromTodoData={SetDeleteTodoResponseFromTodoData} />
+      <TodoData  key={todo.id} displayData={todo} SetDeleteTodoResponseFromTodoData={SetDeleteTodoResponseFromTodoData} SetUpdateTodoResponseFromTodoData={SetUpdateTodoResponseFromTodoData} />
       )):
-      <div>No Todos Added yet!</div>
+      <div className='text-center text-danger'>No Todos Added yet!</div>
   
   
   }

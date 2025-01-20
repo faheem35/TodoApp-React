@@ -13,7 +13,15 @@ export const getAllTodoAPI=async()=>{
           return await commonAPI(`GET`,`${serverUrl}/uploadingTodos`,"")
 }
 
-//removeTodoAPI- get req, view component 
+//removeTodoAPI- delete req, view component 
 export const removeTodoAPI=async(id)=>{
           return await commonAPI(`DELETE`,`${serverUrl}/uploadingTodos/${id}`,{})
 }
+
+//updateTodoAPI- delete req, view component 
+export const updateTodoAPI=async(id,updatedData)=>{
+       return await commonAPI(`PUT`,`${serverUrl}/uploadingTodos/${id}`,updatedData)
+}
+
+
+     

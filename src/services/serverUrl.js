@@ -1,3 +1,3 @@
-const serverUrl= "http://localhost:3000"
+const serverUrl= "https://todoapp-server-u6jg.onrender.com"
 
 export default serverUrl

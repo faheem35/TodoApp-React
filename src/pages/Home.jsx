@@ -7,7 +7,7 @@ const Home = () => {
   const [addResponseFromHome,setAddResponseFromHome]=useState("")
   return (
     <>
-  <h1 className='mb-5 mt-3'>Todo App</h1>
+  <h1 className='my-4 text-warning fw-semibold'>To-dos</h1>
     <View addResponseFromHome={addResponseFromHome}/>
    <div className='position-fixed end-0 bottom-0 p-3'> <Add setAddResponseFromHome={setAddResponseFromHome}/></div>
     </>
